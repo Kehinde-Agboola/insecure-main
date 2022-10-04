@@ -1,0 +1,152 @@
+html{
+    font-size:100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+
+
+    // height:400vh;
+
+    padding:0;
+    margin:0;
+    line-height: 1.3;
+    font-size: 1rem;
+
+    // for heading
+    font-family: 'Barlow', sans-serif;
+
+    // for body
+    font-family: 'Ubuntu', sans-serif;
+
+    overflow-x: hidden;
+
+
+
+    &.noscroll{
+        overflow: hidden;
+    }
+}
+
+*, a:visited, a:hover{
+    text-decoration: none; 
+}
+
+ul{
+    list-style: none;
+}
+
+
+// flexbox syles
+.flex{
+    display:flex;
+
+    &-jc-sb{
+        justify-content: space-between;  
+    }
+    &-jc-c{
+        justify-content: center;
+    }
+    &-ai-c{
+        align-items: center;
+    }
+    &-jc-se{
+        justify-content:space-evenly;
+    }
+
+    &-jc-sa{
+        justify-content:space-around;
+    }
+
+}
+
+.container{
+
+    max-width: 1440px;
+    margin: 0 auto;
+
+
+    max-width: 69.375rem;
+    margin: 0 auto;
+
+    // padding: 0 20rem;
+
+    &--plr{
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+
+    &--pl{
+        padding-left: 8rem;
+    }
+    &-pr{
+        padding-right: 8rem;
+    }
+    &--mr{
+        margin-right: 8rem;
+    }
+
+}
+
+
+.button{
+    display:inline-block;
+    padding:0.75rem 1.9rem;
+    border:2px $DarkGrayishViolet solid;
+    color: $DarkViolet;
+    z-index:99;
+
+}
+// visibility
+.hide-for-mobile{
+    // hide for tablets and mobile
+    @include breakpoint-down(medium){
+        display:none;
+    }
+}
+
+.hide-for-desktop{
+    @include breakpoint-up(large){
+        display:none;
+    }
+}  
+
+
+
+
+
+
+
+// &__content{
+         
+//     position: relative;
+//     padding-right: 10rem;
+//     // width:50%;
+//     // padding-bottom: 5rem;
+
+
+//     &::before{
+
+//         content: '';
+//         position: relative;
+//         position: absolute;
+//         width: 30%;
+//         display: block;
+//         background:$GrayishBlue;
+//         height: 3px;
+//         left: 0;
+//         right: 0;
+//         bottom:520px;
+//         // bottom: 84%;
+
+//     }
+
+//  }
+
+
+
